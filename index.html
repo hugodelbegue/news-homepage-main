@@ -33,7 +33,16 @@
           <img src="./assets/images/logo.svg" alt="logo" />
         </div>
         <nav>
-          <div class="container__nav__links">
+          <button id="open">
+            <img src="./assets/images/icon-menu.svg" alt="icon menu" />
+          </button>
+          <div class="container__nav__links" id="menu">
+            <button id="close">
+              <img
+                src="./assets/images/icon-menu-close.svg"
+                alt="icon menu close"
+              />
+            </button>
             <ul>
               <li>Home</li>
               <li>New</li>
@@ -50,7 +59,16 @@
       <section class="container__main">
         <article class="container__main__article">
           <div class="main__article__img">
-            <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+            <img
+              src="./assets/images/image-web-3-desktop.jpg"
+              alt="photo article"
+              id="desktop__img"
+            />
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt="photo article"
+              id="mobile__img"
+            />
           </div>
           <div class="container__article__text">
             <div class="main__article__title">
@@ -72,24 +90,26 @@
         <aside class="container__new">
           <h2>New</h2>
           <div class="container__new__article">
-            <h3>Hydrogen VS Electric Cars</h3>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-          </div>
-          <hr />
-          <div class="container__new__article">
-            <h3>The Downsides of AI Artistry</h3>
-            <p>
-              What are the possible adverse effects of on-demand AI image
-              generation?
-            </p>
-          </div>
-          <hr />
-          <div class="container__new__article">
-            <h3>Is VC Funding Drying Up?</h3>
-            <p>
-              Private funding by VC firms is down 50% YOY. We take a look at
-              what that means.
-            </p>
+            <div class="new__article">
+              <h3>Hydrogen VS Electric Cars</h3>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <hr />
+            <div class="new__article">
+              <h3>The Downsides of AI Artistry</h3>
+              <p>
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <hr />
+            <div class="new__article">
+              <h3>Is VC Funding Drying Up?</h3>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
           </div>
         </aside>
       </section>
@@ -132,6 +152,7 @@
           </div>
         </div>
       </section>
+      <div class="overlay"></div>
     </main>
 
     <div class="attribution">
@@ -140,5 +161,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://primalprod.fr/">Hugo Delbegue</a>.
     </div>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,4 @@
+$mediumUpScreen: "only screen and (max-width: 1300px)";
+$mediumDownScreen: "only screen and (max-width: 920px)";
+// Mobile
+$mobileScreen: "only screen and (max-width: #{$mobile})";

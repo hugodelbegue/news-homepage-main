@@ -140,6 +140,23 @@ table {
   background: hsl(36deg, 100%, 99%);
   margin: auto;
   padding: 5rem 10rem;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 1300px) {
+  :root body {
+    padding: 3.8rem 7rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  :root body {
+    padding: clamp(1rem, 4vh, 4.5rem);
+  }
+}
+@media only screen and (max-width: 375px) {
+  :root body {
+    max-width: 375px;
+    padding: 1.5rem 1rem;
+  }
 }
 :root h1 {
   font-size: 45px;
@@ -148,13 +165,14 @@ table {
 :root h2 {
   font-size: 35px;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 3rem;
 }
 :root h3 {
   font-size: 17px;
   font-weight: 700;
   margin-bottom: 0.8rem;
   transition: color 0.25s;
+  line-height: initial;
 }
 :root h3:hover {
   cursor: pointer;
@@ -162,7 +180,7 @@ table {
 :root p {
   font-size: 15px;
   color: hsl(236deg, 13%, 42%);
-  line-height: initial;
+  line-height: 1.5rem;
 }
 :root span {
   font-size: 25px;
@@ -176,11 +194,64 @@ header .container__header {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 920px) {
+  header nav {
+    display: flex;
+  }
+}
+header nav #open {
+  display: none;
+}
+@media only screen and (max-width: 920px) {
+  header nav #open {
+    visibility: visible;
+    display: flex;
+    background: hsl(36deg, 100%, 99%);
+    border: none;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 375px) {
+  header nav #open {
+    margin-top: 2rem;
+  }
+}
+header nav #close {
+  visibility: hidden;
+  background: hsl(36deg, 100%, 99%);
+  border: none;
+  margin-top: 1.5rem;
+  margin-left: 10rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 920px) {
+  header nav .container__nav__links {
+    transform: translateX(220px);
+    background: hsl(36deg, 100%, 99%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 220px;
+    height: 100vh;
+    z-index: 1;
+  }
+}
 header nav .container__nav__links ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: visible;
   column-gap: 2rem;
+}
+@media only screen and (max-width: 920px) {
+  header nav .container__nav__links ul {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+    font-weight: 700;
+    margin-top: 5rem;
+    margin-left: 1.3rem;
+  }
 }
 header nav .container__nav__links ul li {
   transition: color 0.25s;
@@ -200,15 +271,40 @@ main section.container__main {
   align-items: initial;
   column-gap: 1.5rem;
 }
+@media only screen and (max-width: 1300px) {
+  main section.container__main {
+    flex-wrap: wrap;
+  }
+}
 main section.container__main article.container__main__article {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 70%;
+}
+@media only screen and (max-width: 1300px) {
+  main section.container__main article.container__main__article {
+    width: 100%;
+  }
 }
 main section.container__main article.container__main__article .main__article__img img {
   width: 100%;
   height: auto;
+}
+main section.container__main article.container__main__article .main__article__img #desktop__img {
+  display: block;
+}
+@media only screen and (max-width: 920px) {
+  main section.container__main article.container__main__article .main__article__img #desktop__img {
+    display: none;
+  }
+}
+main section.container__main article.container__main__article .main__article__img #mobile__img {
+  display: none;
+}
+@media only screen and (max-width: 920px) {
+  main section.container__main article.container__main__article .main__article__img #mobile__img {
+    display: block;
+  }
 }
 main section.container__main article .container__article__text {
   display: flex;
@@ -220,10 +316,21 @@ main section.container__main article .container__article__text {
   margin-top: 1.5rem;
   width: 100%;
 }
+@media only screen and (max-width: 1300px) {
+  main section.container__main article .container__article__text {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
 main section.container__main article .container__article__text .main__article__description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media only screen and (max-width: 1300px) {
+  main section.container__main article .container__article__text .main__article__description {
+    row-gap: 1.5rem;
+  }
 }
 main section.container__main article .container__article__text .main__article__description .main__article__button button {
   background: hsl(5deg, 85%, 63%);
@@ -236,13 +343,24 @@ main section.container__main article .container__article__text .main__article__d
   letter-spacing: 2px;
   transition: background 0.25s;
 }
+@media only screen and (max-width: 920px) {
+  main section.container__main article .container__article__text .main__article__description .main__article__button button {
+    padding: 0.8rem 0.6rem;
+  }
+}
 main section.container__main article .container__article__text .main__article__description .main__article__button button:hover {
   background: hsl(240deg, 100%, 5%);
+  cursor: pointer;
 }
 main section.container__main aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media only screen and (max-width: 1300px) {
+  main section.container__main aside {
+    margin-top: 4rem;
+  }
 }
 main section.container__main aside.container__new {
   background: hsl(240deg, 100%, 5%);
@@ -250,13 +368,24 @@ main section.container__main aside.container__new {
   width: 30%;
   padding: 1.8rem 1.3rem;
 }
+@media only screen and (max-width: 1300px) {
+  main section.container__main aside.container__new {
+    width: 100%;
+  }
+}
 main section.container__main aside.container__new h2 {
   color: hsl(35deg, 77%, 62%);
 }
 main section.container__main aside.container__new h3:hover {
   color: hsl(35deg, 77%, 62%);
 }
-main section.container__main aside.container__new .container__new__article p {
+main section.container__main aside.container__new .container__new__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+main section.container__main aside.container__new .new__article p {
   color: hsl(233deg, 8%, 79%);
 }
 main section.container__main aside.container__new hr {
@@ -264,13 +393,25 @@ main section.container__main aside.container__new hr {
   height: 1px;
   border: none;
   width: 100%;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 main section.container__list {
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
   width: 100%;
+}
+@media only screen and (max-width: 1300px) {
+  main section.container__list {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  main section.container__list {
+    row-gap: 1rem;
+  }
 }
 main section.container__list .container__list__article {
   display: flex;
@@ -294,8 +435,23 @@ main section.container__list .container__list__article .list__article__descripti
   flex-direction: column;
   padding: 0.3rem 0;
 }
+@media only screen and (max-width: 1300px) {
+  main section.container__list .container__list__article .list__article__description {
+    padding: 1rem 0;
+  }
+}
 main section.container__list .container__list__article .list__article__description h3:hover {
   color: hsl(5deg, 85%, 63%);
+}
+main .overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #333;
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=style.css.map */
