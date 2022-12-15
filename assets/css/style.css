@@ -264,7 +264,7 @@ header nav .container__nav__links ul li:hover {
 }
 
 main {
-  padding: 4rem 0 5rem;
+  padding: 3.7rem 0 10rem;
 }
 @media only screen and (max-width: 920px) {
   main {
@@ -412,6 +412,7 @@ main section.container__list {
   justify-content: space-between;
   margin-top: 4rem;
   width: 100%;
+  column-gap: 1rem;
 }
 @media only screen and (max-width: 1300px) {
   main section.container__list {
