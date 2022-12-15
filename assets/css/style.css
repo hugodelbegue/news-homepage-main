@@ -152,6 +152,11 @@ table {
     padding: clamp(1rem, 4vh, 4.5rem);
   }
 }
+@media only screen and (max-width: 620px) {
+  :root body {
+    padding: 2.5rem 2rem;
+  }
+}
 @media only screen and (max-width: 375px) {
   :root body {
     max-width: 375px;
@@ -161,6 +166,7 @@ table {
 :root h1 {
   font-size: 45px;
   font-weight: 800;
+  line-height: 1.1;
 }
 :root h2 {
   font-size: 35px;
@@ -186,8 +192,8 @@ table {
   font-size: 25px;
   color: hsl(233deg, 8%, 79%);
   font-weight: 700;
-  margin-bottom: 0.8rem;
 }
+
 header .container__header {
   display: flex;
   justify-content: center;
@@ -211,12 +217,8 @@ header nav #open {
     cursor: pointer;
   }
 }
-@media only screen and (max-width: 375px) {
-  header nav #open {
-    margin-top: 2rem;
-  }
-}
 header nav #close {
+  display: none;
   visibility: hidden;
   background: hsl(36deg, 100%, 99%);
   border: none;
@@ -262,7 +264,17 @@ header nav .container__nav__links ul li:hover {
 }
 
 main {
-  padding: 3rem 0 5rem;
+  padding: 4rem 0 5rem;
+}
+@media only screen and (max-width: 920px) {
+  main {
+    padding: 2.6rem 0 5rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  main {
+    padding: 1.8rem 0 5rem;
+  }
 }
 main section.container__main {
   display: flex;
@@ -408,11 +420,6 @@ main section.container__list {
     row-gap: 2rem;
   }
 }
-@media only screen and (max-width: 920px) {
-  main section.container__list {
-    row-gap: 1rem;
-  }
-}
 main section.container__list .container__list__article {
   display: flex;
   justify-content: center;
@@ -431,14 +438,11 @@ main section.container__list .container__list__article .list__article__img img {
 main section.container__list .container__list__article .list__article__description {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
-  padding: 0.3rem 0;
 }
-@media only screen and (max-width: 1300px) {
-  main section.container__list .container__list__article .list__article__description {
-    padding: 1rem 0;
-  }
+main section.container__list .container__list__article .list__article__description h3 {
+  margin-bottom: 0;
 }
 main section.container__list .container__list__article .list__article__description h3:hover {
   color: hsl(5deg, 85%, 63%);

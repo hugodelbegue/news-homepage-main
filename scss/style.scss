@@ -28,16 +28,20 @@
             padding: clamp(1rem, 4vh, 4.5rem);
         }
 
+        @media #{$mobileUpScreen} {
+            padding: 2.5rem 2rem;
+        }
+
         @media #{$mobileScreen} {
             max-width: $mobile;
             padding: 1.5rem 1rem;
         }
     }
 
-
     h1 {
         font-size: 45px;
         font-weight: $font__weights__extraBold;
+        line-height: 1.1;
     }
 
     h2 {
@@ -68,10 +72,7 @@
         font-size: 25px;
         color: $neutral__grayish__blue;
         font-weight: $font__weights__bold;
-        margin-bottom: 0.8rem;
     }
-
-    img {}
 }
 
 header {
@@ -96,13 +97,10 @@ header {
                 border: none;
                 cursor: pointer;
             }
-
-            @media #{$mobileScreen} {
-                margin-top: 2rem;
-            }
         }
 
         #close {
+            display: none;
             visibility: hidden;
             background: $neutral__off__white;
             border: none;
@@ -151,7 +149,15 @@ header {
 }
 
 main {
-    padding: 3rem 0 5rem;
+    padding: 4rem 0 5rem;
+
+    @media #{$mediumDownScreen} {
+        padding: 2.6rem 0 5rem;
+    }
+
+    @media #{$mobileScreen} {
+        padding: 1.8rem 0 5rem;
+    }
 
     section {
         &.container__main {
@@ -315,10 +321,6 @@ main {
                 row-gap: 2rem;
             }
 
-            @media #{$mediumDownScreen} {
-                row-gap: 1rem;
-            }
-
             .container__list__article {
                 @include position;
                 align-items: initial;
@@ -337,15 +339,16 @@ main {
                 .list__article__description {
                     display: flex;
                     align-items: flex-start;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     flex-direction: column;
-                    padding: .3rem 0;
 
                     @media #{$mediumUpScreen} {
-                        padding: 1rem 0;
+                        // padding: 1rem 0;
                     }
 
                     h3 {
+                        margin-bottom: 0;
+
                         &:hover {
                             color: $primary__soft__red;
                         }

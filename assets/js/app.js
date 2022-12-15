@@ -8,12 +8,14 @@ window.addEventListener('load', () => {
     open.addEventListener('click', () => {
         menu.style.transform = 'translateX(0px)';
         menu.style.transition = 'transform 1s';
+        close.style.display = 'block';
         close.style.visibility = 'visible';
         overlay.style.display = 'block';
     });
     close.addEventListener('click', () => {
         menu.style.transform = 'translateX(220px)';
         menu.style.transition = 'transform 1s'
+        // close.style.display = 'none';
         close.style.visibility = 'hidden';
         overlay.style.display = 'none';
     });
@@ -21,7 +23,8 @@ window.addEventListener('load', () => {
     // Back to resizing the window
     window.addEventListener('resize', () => {
         menu.style.transform = 'translateX(220px)';
-        close.style.visibility = 'hidden';
+        close.style.display = 'none';
+        // close.style.visibility = 'hidden';
         overlay.style.display = 'none';
         if (window.innerWidth >= 920) {
             menu.style.transform = 'translateX(0px)';
@@ -32,7 +35,8 @@ window.addEventListener('load', () => {
     window.addEventListener('scroll', () => {
         if (window.scrollY) {
             menu.style.transform = 'translateX(220px)';
-            close.style.visibility = 'hidden';
+            close.style.display = 'none';
+            // close.style.visibility = 'hidden';
             overlay.style.display = 'none';
         }
     });
