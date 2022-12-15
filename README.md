@@ -61,7 +61,7 @@ $mobile: 375px;
 $mobileScreen: "only screen and (max-width: #{$mobile})";
 
 nav {
-  @media #{$mediumDownScreen} {
+  @media #{$mobileScreen} {
     display: flex;
 }
 ```
