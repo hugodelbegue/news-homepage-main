@@ -27,11 +27,9 @@ Users should be able to:
 
 ### Screenshot
 
-- Desktop
-  ![](./design/news_homepage_desktop.png)
+![](./design/news_homepage_desktop.svg)
 
-- Mobile
-  ![](./design/news_homepage_mobile.png)
+![](./design/news_homepage_mobile.svg)
 
 ### Links
 
@@ -93,9 +91,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [PriamlProd](https://primalprod.fr/)
+- Website - [PrimalProd](https://primalprod.fr/)
 - Frontend Mentor - [@hugodelbegue](https://www.frontendmentor.io/profile/HUGODELBEGUE)
-- GitHub - [@hugodelbegue](https://github.com/HUGODELBEGUE)
+- GitHub - [HUGODELBEGUE](https://github.com/HUGODELBEGUE)
 
 ## Acknowledgments
 
