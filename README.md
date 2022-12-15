@@ -27,14 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/news_homepage_desktop.svg)
+![](./design/preview_desktop.svg)
 
-![](./design/news_homepage_mobile.svg)
+![](./design/preview_mobile.svg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/HUGODELBEGUE/news-homepage-main](https://github.com/HUGODELBEGUE/news-homepage-main)
+- Live Site URL: [https://hugodelbegue.github.io/news-homepage-main/](https://hugodelbegue.github.io/news-homepage-main/)
 
 ## My process
 
@@ -54,35 +54,21 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Imports of variables for Media queries in Scss(Sass).
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+$mobile: 375px;
+$mobileScreen: "only screen and (max-width: #{$mobile})";
+
+nav {
+  @media #{$mediumDownScreen} {
+    display: flex;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I will focus mainly on the Javascript language for my future projects.
 
 ### Useful resources
 
