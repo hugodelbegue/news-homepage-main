@@ -163,6 +163,18 @@ table {
     padding: 1.5rem 1rem;
   }
 }
+@media (orientation: landscape) {
+  :root body {
+    display: block;
+    overflow-x: hidden;
+  }
+}
+@media (orientation: portrait) {
+  :root body {
+    display: block;
+    overflow-x: hidden;
+  }
+}
 :root h1 {
   font-size: 45px;
   font-weight: 800;
@@ -205,6 +217,9 @@ header .container__header {
     display: flex;
   }
 }
+header nav #menu {
+  transform: translate(0px);
+}
 header nav #open {
   display: none;
 }
@@ -218,7 +233,6 @@ header nav #open {
   }
 }
 header nav #close {
-  display: none;
   visibility: hidden;
   background: hsl(36deg, 100%, 99%);
   border: none;

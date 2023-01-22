@@ -36,6 +36,16 @@
             max-width: $mobile;
             padding: 1.5rem 1rem;
         }
+
+        @media (orientation: landscape) {
+            display: block;
+            overflow-x: hidden;
+        }
+
+        @media (orientation: portrait) {
+            display: block;
+            overflow-x: hidden;
+        }
     }
 
     h1 {
@@ -87,6 +97,10 @@ header {
             display: flex;
         }
 
+        #menu {
+            transform: translate(0px);
+        }
+
         #open {
             display: none;
 
@@ -100,7 +114,6 @@ header {
         }
 
         #close {
-            display: none;
             visibility: hidden;
             background: $neutral__off__white;
             border: none;

@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/HUGODELBEGUE/news-homepage-main](https://github.com/HUGODELBEGUE/news-homepage-main)
+- Solution URL: [https://github.com/hugodelbegue/news-homepage-main](https://github.com/HUGODELBEGUE/news-homepage-main)
 - Live Site URL: [https://hugodelbegue.github.io/news-homepage-main/](https://hugodelbegue.github.io/news-homepage-main/)
 
 ## My process

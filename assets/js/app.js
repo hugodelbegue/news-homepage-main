@@ -5,48 +5,54 @@ window.addEventListener('load', () => {
     const overlay = document.querySelector('.overlay');
 
     // Open and close links menu
-    open.addEventListener('click', () => {
+    const openMenu = () => {
         menu.style.transform = 'translateX(0px)';
         menu.style.transition = 'transform 1s';
-        close.style.display = 'block';
+        close.style.display = 'flex'
         close.style.visibility = 'visible';
         overlay.style.display = 'block';
-    });
-    close.addEventListener('click', () => {
+    }
+    const closeMenu = () => {
         menu.style.transform = 'translateX(220px)';
         menu.style.transition = 'transform 1s'
-        // close.style.display = 'none';
         close.style.visibility = 'hidden';
         overlay.style.display = 'none';
-    });
+    }
 
     // Back to resizing the window
-    window.addEventListener('resize', () => {
+    const resizeWindow = () => {
         menu.style.transform = 'translateX(220px)';
         close.style.display = 'none';
-        // close.style.visibility = 'hidden';
         overlay.style.display = 'none';
         if (window.innerWidth >= 920) {
             menu.style.transform = 'translateX(0px)';
         }
-    });
+    }
 
     // Back to scroll
-    window.addEventListener('scroll', () => {
+    const scrollWindow = () => {
         if (window.scrollY) {
             menu.style.transform = 'translateX(220px)';
             close.style.display = 'none';
-            // close.style.visibility = 'hidden';
             overlay.style.display = 'none';
         }
-    });
+    }
+
+    open.addEventListener('click', openMenu);
+    close.addEventListener('click', closeMenu);
+    window.addEventListener('resize', resizeWindow);
+    window.addEventListener('scroll', scrollWindow);
+
+
+    // window.addEventListener("orientationchange", () => {
+    //     console.log("The orientation of the screen is: " + window.orientation);
+    //     if (window.orientation == 0 || window.orientation == 90) {
+    //         console.log('hello');
+    //         menu.style.transform = 'translateX(220px)!important';
+    //         close.style.visibility = 'hidden';
+    //     }
+    // });
 });
 
-// window.addEventListener("orientationchange", () => {
-//     console.log("The orientation of the screen is: " + window.orientation);
-//     if (window.orientation === 0 && window.orientation === 90) {
-//         menu.style.transform = 'translateX(220px)!important';
-//     }
-// });
 
 
