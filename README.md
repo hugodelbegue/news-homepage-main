@@ -1,4 +1,4 @@
-# Frontend Mentor - News homepage solution
+# News homepage solution
 
 This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
@@ -77,7 +77,7 @@ I will focus mainly on the Javascript language for my future projects.
 
 ## Author
 
-- Website - [PrimalProd](https://primalprod.fr/)
+- Website - [primalprod.fr](https://primalprod.fr/)
 - Frontend Mentor - [@hugodelbegue](https://www.frontendmentor.io/profile/HUGODELBEGUE)
 - GitHub - [HUGODELBEGUE](https://github.com/HUGODELBEGUE)
 
