@@ -115,7 +115,7 @@ header {
             @media #{$mediumDownScreen} {
                 display: none;
                 background: $neutral__off__white;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
                 width: 220px;
@@ -392,7 +392,7 @@ main {
 
     .overlay {
         display: none;
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         top: 0;

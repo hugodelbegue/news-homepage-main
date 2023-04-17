@@ -232,7 +232,7 @@ header nav #close {
   header nav .container__nav__links {
     display: none;
     background: hsl(36deg, 100%, 99%);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 220px;
@@ -474,7 +474,7 @@ main section.container__list .container__list__article .list__article__descripti
 }
 main .overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
