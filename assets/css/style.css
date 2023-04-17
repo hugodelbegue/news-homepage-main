@@ -140,7 +140,6 @@ table {
   background: hsl(36deg, 100%, 99%);
   margin: auto;
   padding: 5rem 10rem;
-  overflow-x: hidden;
 }
 @media only screen and (max-width: 1300px) {
   :root body {
@@ -161,18 +160,6 @@ table {
   :root body {
     max-width: 375px;
     padding: 1.5rem 1rem;
-  }
-}
-@media (orientation: landscape) {
-  :root body {
-    display: block;
-    overflow-x: hidden;
-  }
-}
-@media (orientation: portrait) {
-  :root body {
-    display: block;
-    overflow-x: hidden;
   }
 }
 :root h1 {
@@ -217,15 +204,11 @@ header .container__header {
     display: flex;
   }
 }
-header nav #menu {
-  transform: translate(0px);
-}
 header nav #open {
   display: none;
 }
 @media only screen and (max-width: 920px) {
   header nav #open {
-    visibility: visible;
     display: flex;
     background: hsl(36deg, 100%, 99%);
     border: none;
@@ -233,16 +216,21 @@ header nav #open {
   }
 }
 header nav #close {
-  visibility: hidden;
-  background: hsl(36deg, 100%, 99%);
-  border: none;
-  margin-top: 1.5rem;
-  margin-left: 10rem;
-  cursor: pointer;
+  display: none;
+}
+@media only screen and (max-width: 920px) {
+  header nav #close {
+    display: flex;
+    background: hsl(36deg, 100%, 99%);
+    border: none;
+    margin-top: 1.5rem;
+    margin-left: 10rem;
+    cursor: pointer;
+  }
 }
 @media only screen and (max-width: 920px) {
   header nav .container__nav__links {
-    transform: translateX(220px);
+    display: none;
     background: hsl(36deg, 100%, 99%);
     position: absolute;
     top: 0;
@@ -256,7 +244,6 @@ header nav .container__nav__links ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: visible;
   column-gap: 2rem;
 }
 @media only screen and (max-width: 920px) {
@@ -277,6 +264,30 @@ header nav .container__nav__links ul li:hover {
   cursor: pointer;
 }
 
+.hidden {
+  animation: close 0.5s ease both;
+}
+
+.show {
+  animation: open 0.5s ease both;
+}
+
+@keyframes close {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(220px);
+  }
+}
+@keyframes open {
+  from {
+    transform: translateX(220px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 main {
   padding: 3.7rem 0 10rem;
 }
@@ -441,7 +452,6 @@ main section.container__list .container__list__article {
   align-items: center;
   align-items: initial;
   column-gap: 1.3rem;
-  min-width: 33.3333333333%;
 }
 main section.container__list .container__list__article .list__article__img {
   margin: auto 0;

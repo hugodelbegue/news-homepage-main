@@ -1,58 +1,41 @@
-window.addEventListener('load', () => {
-    const menu = document.getElementById('menu');
-    const open = document.getElementById('open');
-    const close = document.getElementById('close');
-    const overlay = document.querySelector('.overlay');
+const menu = document.getElementById('menu');
+const openBtn = document.getElementById('open');
+const closeBtn = document.getElementById('close');
+const overlay = document.querySelector('.overlay');
 
-    // Open and close links menu
-    const openMenu = () => {
-        menu.style.transform = 'translateX(0px)';
-        menu.style.transition = 'transform 1s';
-        close.style.display = 'flex'
-        close.style.visibility = 'visible';
-        overlay.style.display = 'block';
+const toggleMenu = (open) => {
+    if (!open) {
+        menu.classList.remove('show');
+        menu.classList.add('hidden');
+        setTimeout(() => {
+            menu.style.display = "none"
+        }, 500)
+    } else {
+        menu.style.display = "block"
+        menu.classList.add('show');
+        menu.classList.remove('hidden');
     }
-    const closeMenu = () => {
-        menu.style.transform = 'translateX(220px)';
-        menu.style.transition = 'transform 1s'
-        close.style.visibility = 'hidden';
-        overlay.style.display = 'none';
+};
+
+const resizeHandler = () => {
+    if (window.innerWidth < 920) {
+        menu.style.display = "none"
+        menu.classList.remove('show');
     }
-
-    // Back to resizing the window
-    const resizeWindow = () => {
-        menu.style.transform = 'translateX(220px)';
-        close.style.display = 'none';
-        overlay.style.display = 'none';
-        if (window.innerWidth >= 920) {
-            menu.style.transform = 'translateX(0px)';
-        }
+    if (window.innerWidth > 920) {
+        menu.style.display = 'block'
+        menu.classList.remove('hidden')
     }
+};
 
-    // Back to scroll
-    const scrollWindow = () => {
-        if (window.scrollY) {
-            menu.style.transform = 'translateX(220px)';
-            close.style.display = 'none';
-            overlay.style.display = 'none';
-        }
-    }
+const scrollHandler = () => {
+    toggleMenu(false);
+};
 
-    open.addEventListener('click', openMenu);
-    close.addEventListener('click', closeMenu);
-    window.addEventListener('resize', resizeWindow);
-    window.addEventListener('scroll', scrollWindow);
-
-
-    // window.addEventListener("orientationchange", () => {
-    //     console.log("The orientation of the screen is: " + window.orientation);
-    //     if (window.orientation == 0 || window.orientation == 90) {
-    //         console.log('hello');
-    //         menu.style.transform = 'translateX(220px)!important';
-    //         close.style.visibility = 'hidden';
-    //     }
-    // });
-});
+openBtn.addEventListener('click', () => toggleMenu(true));
+closeBtn.addEventListener('click', () => toggleMenu(false));
+window.addEventListener('resize', resizeHandler);
+window.addEventListener('scroll', scrollHandler);
 
 
 
