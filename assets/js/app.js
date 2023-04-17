@@ -5,7 +5,7 @@ const overlay = document.querySelector('.overlay');
 
 const toggleMenu = (open) => {
     if (!open) {
-        overlay.style.display = 'none';
+        overlay.style.display = '';
         menu.classList.remove('show');
         menu.classList.add('hidden');
         setTimeout(() => {
@@ -22,16 +22,11 @@ const toggleMenu = (open) => {
 };
 
 const resizeHandler = () => {
+    menu.style = ""
+    menu.classList.remove('show');
+    menu.classList.remove('hidden')
     overlay.style.display = '';
     document.body.style.overflow = '';
-    if (window.innerWidth < 920) {
-        menu.style = ""
-        menu.classList.remove('show');
-    }
-    if (window.innerWidth > 920) {
-        menu.style.display = ''
-        menu.classList.remove('hidden')
-    }
 };
 
 openBtn.addEventListener('click', () => toggleMenu(true));
