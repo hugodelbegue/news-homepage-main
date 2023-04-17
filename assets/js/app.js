@@ -5,37 +5,38 @@ const overlay = document.querySelector('.overlay');
 
 const toggleMenu = (open) => {
     if (!open) {
+        overlay.style.display = 'none';
         menu.classList.remove('show');
         menu.classList.add('hidden');
         setTimeout(() => {
-            menu.style.display = "none"
+            menu.style.display = "none";
+            document.body.style.overflow = '';
         }, 500)
     } else {
-        menu.style.display = "block"
+        overlay.style.display = 'block';
+        menu.style.display = "block";
         menu.classList.add('show');
         menu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
     }
 };
 
 const resizeHandler = () => {
+    overlay.style.display = '';
+    document.body.style.overflow = '';
     if (window.innerWidth < 920) {
-        menu.style.display = "none"
+        menu.style = ""
         menu.classList.remove('show');
     }
     if (window.innerWidth > 920) {
-        menu.style.display = 'block'
+        menu.style.display = ''
         menu.classList.remove('hidden')
     }
-};
-
-const scrollHandler = () => {
-    toggleMenu(false);
 };
 
 openBtn.addEventListener('click', () => toggleMenu(true));
 closeBtn.addEventListener('click', () => toggleMenu(false));
 window.addEventListener('resize', resizeHandler);
-window.addEventListener('scroll', scrollHandler);
 
 
 
