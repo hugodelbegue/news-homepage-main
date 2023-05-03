@@ -77,7 +77,7 @@ I will focus mainly on the Javascript language for my future projects.
 
 ## Author
 
-- Website - [primalprod.fr](https://primalprod.fr/)
+- Portfolio - [hugodelbegue.fr](https://hugodelbegue.fr/)
 - Frontend Mentor - [@hugodelbegue](https://www.frontendmentor.io/profile/HUGODELBEGUE)
 - GitHub - [HUGODELBEGUE](https://github.com/HUGODELBEGUE)
 
